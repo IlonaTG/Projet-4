@@ -1,0 +1,151 @@
+/****** General ***********/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+ 
+
+body{
+    margin: 0%;
+}
+
+.main-container{
+    width: 100%;
+    height: 3000px;
+    max-width: 767px;
+    padding: 0%; 
+    margin: 0%; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*Headline*/
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.icon-location{
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
+    padding: 15px;
+}
+
+.location{
+    padding-left: 15px;
+}
+.section__bg-color{
+    background-color: #F6F6F6;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight:700;
+    margin: 0% 10%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p{
+    font-size: 18px;
+    margin: 0%;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.btn{
+    width: 218px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: linear-gradient(#FF79DA, #9356DC);
+    border-radius: 25px;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card__icon--heart{
+    border-color: #0a0a0a
+}
+
+/****** Restaurants ***********/
+
+.restaurants{
+    background-color: #F6F6F6;
+    padding: 0 15px;
+}
+
+.restaurants__title{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.restaurants__cards .card{
+    width: 100%;
+    height: 251px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.restaurants__cards img{
+    Width:100%;
+    Height: 174px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.restaurants__cards a{
+    text-decoration: none;
+    color: black;
+    margin: 0%;
+    text-align: left;
+    width: 29%;
+}
+
+.restaurants__cards .card__txt{
+    Width: 100%;
+    Height: 77px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.card__contect .card__title{
+    margin: 0%;
+    padding-bottom: 5px;
+}
+
+.card__contect .card__icon--heart{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+
+}
+.card__contect .card__icon--heart :hover{
+    border-color: linear-gradient(#9356DC,#FF79DA);;
+    background: linear-gradient(#9356DC,#FF79DA);
+}
+.card .card__badge--nouveau{
+    width: 80px;
+    height: 29px;
+    background-color: #99E2D0;
+    color: #008766;
+    border: 2px solid #99E2D0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
+    
+}
+
+
