@@ -1,0 +1,10 @@
+@mixin position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin position__colonne{
+    @include position;
+    flex-direction: column;
+}
