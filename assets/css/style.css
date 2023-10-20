@@ -211,7 +211,7 @@ p {
   opacity: 0;
 }
 
-.icon__heart--full:active {
+.icon__heart--full:hover {
   opacity: 1;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;

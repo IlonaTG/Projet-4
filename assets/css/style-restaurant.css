@@ -1,0 +1,175 @@
+
+.main-container{
+  height: 1747px;
+ 
+}
+
+.menu__image img{
+    width: 100%;
+    height: 275px;
+    position: absolute;
+}
+.fa-arrow-left{
+  color: black;
+
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__restaurant{
+  height: 1240px;
+  background-color: #f3f3f3;
+  border-top-left-radius: 20px ;
+  border-top-right-radius: 20px;
+  overflow:hidden;
+  position: relative;
+  top: 220px;
+}
+
+.menu__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_title--name{
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.restaurant__favorite i{
+  position: absolute;
+  right:13px;
+  top: 35px;
+}
+
+.bordered__title{
+  margin-left: 15px;
+  border-bottom: 4px solid #99E2D0;
+}
+
+.menu__contain--entree,
+.menu__contain--plats,
+.menu__contain--desserts
+{
+ padding-bottom: 10px;
+}
+.menu__card{
+  width: 88%;
+  height: 72px;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.dish__name{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 18%;
+
+}
+
+.dish__descriptionandprice{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: -35px;
+  
+}
+.dish__description{
+  font-size: 15px;
+  font-weight: 300;
+  
+  
+}
+.dish__price{
+  margin-right: 5%;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dish__choise{
+  position: absolute;
+  margin-left: 83%;
+  visibility: hidden;
+}
+
+.dish__choise button{
+  width: 70px;
+  height: 75px;
+  background-color: #99E2D0;
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+  position: relative;
+}
+
+.dish__choise i{
+  width: 20px;
+  height: 20px;
+  border: 1px solid white ;
+  border-radius: 30px;
+  background-color: white;
+  color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__card:hover .dish__name{
+  width: 80%;
+  transition: 950ms;
+  white-space: nowrap;
+ 
+  text-overflow: ellipsis;
+}
+
+.menu__card:hover .dish__description{
+  margin-right: 5%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu__card:hover .dish__price{
+  margin-right: 25%;
+  transition: 950ms;
+}
+.menu__card:hover .dish__choise{
+  visibility: visible;
+  margin-left: 71%;
+  transition: all 1s;
+  transform: translate(-20%, 0%);
+}
+.menu__card:hover .dish__choise i{
+  transform: rotate(2turn);
+  transition: transform 2s;
+}
+
+.btn{
+  width:50%;
+  margin-left: 25%;
+}
+
+.footer{
+  margin-top: 67%;
+}
