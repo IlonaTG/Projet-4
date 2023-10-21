@@ -8,3 +8,9 @@
     @include position;
     flex-direction: column;
 }
+
+@mixin position__card--txt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}

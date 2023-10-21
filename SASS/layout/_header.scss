@@ -1,0 +1,6 @@
+@import "../utils/mixins"; 
+
+.logo {
+	@include position;
+	margin: 20px;
+}

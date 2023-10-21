@@ -1,3 +1,7 @@
+@import "./layout/header";
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./base/typography";
 
 body {
 	margin: 0%;
@@ -11,16 +15,14 @@ body {
 	box-sizing: border-box;
 	overflow: hidden;
 }
-.logo {
-	@include position;
-	margin: 20px;
-}
+
 .icon-location {
 	@include position;
 	background-color: $bg__location--color;
 	padding: 15px;
 	border-top: 2px solid rgb(216, 214, 214);
 }
+
 .location {
 	padding-left: 15px;
 }
@@ -44,13 +46,16 @@ h1 {
 	margin-top: 25px;
 	margin-bottom: 15px;
 	text-align: center;
+    font-family: $font__family--Roboto;
 }
 p {
 	font-size: 18px;
 	margin: 0%;
 	text-align: center;
 	margin-bottom: 55px;
+    font-family: $font__family--Roboto;
 }
+
 .btn {
     @include position;
 	width: 218px;
@@ -64,27 +69,34 @@ p {
 	text-decoration: none;
 	font-weight: 700;
 	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: $font__family--Roboto;
 	&:hover {
 		background: #eba2d6;
 		border: 1px solid #bfb5cc;
 	}
 }
+.process__steps{
+    margin-bottom: 40px;
+}
+
 .process__title {
 	padding: 0 15px;
 	font-size: 24px;
 	font-weight: 700;
+    font-family: $font__family--Roboto;
 }
 .process__step {
     @include position;
-	width: 80%;
+	width: 85%;
 	height: 72.38px;
 	border: 1px solid #F6F6F6;
 	border-radius: 20px;
-	margin-left: 30px;
+	margin-left: 25px;
 	margin-bottom: 20px;
 	align-items: center;
+    font-family: $font__family--Roboto;
 	background-color: $bg__color--lightgrey;
-	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
 	position: relative;
 	cursor: pointer;
 	.process__icon {
@@ -94,11 +106,12 @@ p {
 		}
 	}
 }
-.process__steps {
+.process__step {
 	&:hover {
-		background-color: #e2bed8;
+		background-color: #e0c7d9;
 	}
-	padding-bottom: 20px;
+	margin-bottom: 20px;
+    border: none;
 }
 .process__icon {
 	color: #7E7E7E;
@@ -113,6 +126,7 @@ p {
 	margin: 10%;
 	margin-left: 5%;
 }
+
 .process__number {
     @include position;
 	position: absolute;
@@ -123,16 +137,20 @@ p {
 	background-color: $primary__color;
 	text-align: center;
 	color: $text__color--white;
-	transform: translate(-130px, 0px);
+	transform: translate(-140px, 0px);
 }
+
 .restaurants {
 	background-color: $bg__color--lightgrey;
 	padding: 10px 15px;
 }
+
 .restaurants__title {
 	font-size: 24px;
 	font-weight: 700;
+    font-family: $font__family--Roboto;
 }
+
 .restaurants__cards {
 	.card {
 		width: 100%;
@@ -153,15 +171,17 @@ p {
 		margin: 0%;
 		text-align: left;
 		width: 29%;
+        font-family: $font__family--Roboto;
 	}
 	.card__txt {
-        @include position__colonne;
+        @include position__card--txt;
 		width: 100%;
 		height: 77px;
 		padding-left: 10px;
 		padding-top: 10px;
 	}
 }
+
 .card__contect {
 	.card__title {
 		margin: 0%;
@@ -174,11 +194,12 @@ p {
 		transform: translate(32vh, -9vh);
 	}
 }
+
 .icon__heart--full {
 	opacity: 0;
 	&:active {
 		opacity: 1;
-		background-color: $background-color_6;
+		background-color: linear-gradient($secondary__color, $primary__color);
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: $color__transparent;
@@ -187,49 +208,29 @@ p {
 	}
 }
 
-.card__badge--nouveau {
+.card .card__badge--nouveau {
     width: 80px;
-	height: 29px;
-	background: $tertiary__color;
-	color: $badge__text--color;
-	border: 2px solid #99E2D0;
-	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-	position: absolute;
-	transform: translate(26vh, -33vh);
+    height: 29px;
+    background-color: #99E2D0;
+    color: #008766;
+    border: 2px solid #99E2D0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transform: translate(26vh, -33vh);
     
-    p{
-        @include position;
-        font-size: 14px;
-        font-weight: 500;
-    }
-}
+  }
 
-.footer {
-	background-color: $bg__footer--color;
-}
-.footer__title {
-	color: $text__color--white;
-	font-size: 18px;
-	font-weight: 400;
-	font-style: italic;
-	padding: 5px 15px;
-	font-family: $font__family--Shrikhand;
-}
-.footer__links {
-    @include position__colonne;
-	a {
-		text-decoration: none;
-		color: $text__color--white;
-		padding: 5px 15px;
-	}
-	i {
-		padding-right: 7px;
-	}
-	.fa-utensils {
-		padding-right: 13px;
-	}
-}
+  .card__badge--nouveau p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $font__family--Roboto;
+    padding-top: 5px;
+    
+  }
 
-
+@import "./layout/footer";
 
 
