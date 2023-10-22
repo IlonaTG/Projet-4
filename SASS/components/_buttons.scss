@@ -16,15 +16,5 @@
     font-family: $font__family--Roboto;
 }
 
-.dish__choice--button{
-	@include position;
-		width: 70px;
-		height: 75px;
-		background-color: $tertiary__color;
-		border: none;
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
-		cursor: pointer;
-		position: relative;
-}
+
 

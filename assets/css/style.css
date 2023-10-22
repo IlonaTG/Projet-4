@@ -23,18 +23,41 @@
   font-family: "Roboto", sans-serif;
 }
 
-.dish__choice--button {
+.footer {
+  background-color: #353535;
+  width: 100%;
+  height: 195px;
+  position: absolute;
+}
+
+.footer__title {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  padding-left: 15px;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.footer__links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 75px;
-  background-color: #99E2D0;
-  border: none;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  cursor: pointer;
+  flex-direction: column;
+}
+
+.footer__links a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
   position: relative;
+  padding: 5px 15px;
+}
+
+.footer__links i {
+  padding-right: 7px;
+}
+
+.footer__links .fa-utensils {
+  padding-right: 13px;
 }
 
 body {
@@ -43,7 +66,7 @@ body {
 
 .main-container {
   width: 100%;
-  height: 2180px;
+  height: 100%;
   max-width: 767px;
   padding: 0%;
   margin: 0%;
@@ -222,11 +245,17 @@ p {
 .card__contect .card__title {
   margin: 0%;
   padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.card__contect .card__subtitle {
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .card__icon--heart i {
   position: absolute;
-  transform: translate(32vh, -9vh);
+  transform: translate(37vh, -9vh);
 }
 
 .icon__heart--full {
@@ -250,7 +279,7 @@ p {
   border: 2px solid #99E2D0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   position: absolute;
-  transform: translate(26vh, -33vh);
+  transform: translate(28vh, -36vh);
 }
 
 .card__badge--nouveau p {
