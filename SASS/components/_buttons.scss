@@ -1,0 +1,30 @@
+@import "../utils/mixins";
+
+.btn{
+@include position;
+	width: 218px;
+	height: 50px;
+	border: none;
+	background: linear-gradient($secondary__color, $primary__color);
+	border-radius: 25px;
+	margin-left: 15%;
+	margin-bottom: 50px;
+	color: $text__color--white;
+	text-decoration: none;
+	font-weight: 700;
+	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: $font__family--Roboto;
+}
+
+.dish__choice--button{
+	@include position;
+		width: 70px;
+		height: 75px;
+		background-color: $tertiary__color;
+		border: none;
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
+		cursor: pointer;
+		position: relative;
+}
+

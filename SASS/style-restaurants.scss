@@ -1,0 +1,145 @@
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./base/typography";
+@import "./components/buttons";
+
+.main-container {
+	height: 1747px;
+}
+.menu__image {
+	img {
+		width: 100%;
+		height: 275px;
+		position: absolute;
+	}
+}
+.fa-arrow-left {
+	color: $text__color--black;
+}
+header {
+	@include position;
+}
+.menu__restaurant {
+	height: 1240px;
+	background-color: $bg__color--lightgrey;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	top: 220px;
+    font-family: $font__family--Roboto;
+}
+.menu__title {
+	@include position;
+}
+
+.menu_title--name {
+	font-family: $font__family--Shrikhand;
+	font-size: 28;
+	font-style: italic;
+	margin-left: 10px;
+}
+.restaurant__favorite {
+	i {
+		position: absolute;
+		right: 13px;
+		top: 35px;
+	}
+}
+.bordered__title {
+	margin-left: 15px;
+	border-bottom: 4px solid $tertiary__color;
+}
+.menu__contain--entree {
+	@include padding10px;
+}
+.menu__contain--plats {
+		@include padding10px;
+}
+.menu__contain--desserts {
+		@include padding10px;
+}
+.menu__card {
+    @include position__colonne;
+	width: 88%;
+	height: 72px;
+	border: 1px solid $text__color--white;
+	background-color: $bg__color--white;
+	box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	margin: 0 15px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	&:hover {
+		.dish__name {
+			width: 80%;
+			transition: 950ms;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.dish__description {
+		    @include ellipsis;
+			margin-right: 5%;
+			
+		}
+		.dish__price {
+			margin-right: 25%;
+			transition: 700ms;
+		}
+		.dish__choise {
+			visibility: visible;
+			margin-left: 71%;
+			transition: all 1s;
+			transform: translate(-20%, 0%);
+			i {
+				transform: rotate(2turn);
+				transition: transform 2s;
+			}
+		}
+	}
+}
+.dish__name {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 18%;
+}
+.dish__descriptionandprice {
+	@include position__card--txt;
+	position: relative;
+	top: -35px;
+}
+.dish__description {
+	font-size: 15px;
+	font-weight: 300;
+}
+.dish__price {
+	margin-right: 5%;
+	font-size: 15px;
+	font-weight: 700;
+}
+.dish__choise {
+	position: absolute;
+	margin-left: 74%;
+	visibility: hidden;
+	button {
+	    @include dish__choice--button;
+	}
+	i {
+	    @include position;
+		width: 20px;
+		height: 20px;
+		border: 1px solid $text__color--white;
+		border-radius: 30px;
+		background-color: $bg__color--white;
+		color: $tertiary__color;
+		
+	}
+}
+.btn {
+	width: 50%;
+	margin-left: 25%;
+}
+.footer {
+	margin-top: 45%;
+}
