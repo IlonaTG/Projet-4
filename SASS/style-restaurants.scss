@@ -5,7 +5,6 @@
 @import "./layout/footer";
 @import "./utils/functions";
 
-
 .main-container{
     height: 1750px;
 }
@@ -106,9 +105,9 @@ header {
 		}
 		.dish__choise {
 			visibility: visible;
-			margin-left: 71%;
-			transition: all 1s;
-			transform: translate(-20%, 0%);
+			margin-right: 60%;
+			transition: all 2s;
+			transform: translate(-30%, 0%);
 			i {
 				transform: rotate(2turn);
 				transition: transform 2s;
@@ -137,7 +136,7 @@ header {
 }
 .dish__choise {
 	position: absolute;
-	margin-left: 74%;
+	margin-left: 81%;
 	visibility: hidden;
 	button {
 	    @include position;
@@ -169,5 +168,5 @@ header {
     
 }
 .footer {
-	margin-top: 45%;
+	margin-top: 66%;
 }

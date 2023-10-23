@@ -77,6 +77,60 @@
     transform: translateX(0);
   }
 }
+@keyframes fadeInOut {
+  0% {
+    background-color: #07fdf1;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+    background-color: transparent;
+  }
+}
+@keyframes loader {
+  12% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .main-container {
   height: 1750px;
 }
@@ -192,9 +246,9 @@ header {
 }
 .menu__card:hover .dish__choise {
   visibility: visible;
-  margin-left: 71%;
-  transition: all 1s;
-  transform: translate(-20%, 0%);
+  margin-right: 60%;
+  transition: all 2s;
+  transform: translate(-30%, 0%);
 }
 .menu__card:hover .dish__choise i {
   transform: rotate(2turn);
@@ -228,7 +282,7 @@ header {
 
 .dish__choise {
   position: absolute;
-  margin-left: 74%;
+  margin-left: 81%;
   visibility: hidden;
 }
 .dish__choise button {
@@ -262,5 +316,5 @@ header {
 }
 
 .footer {
-  margin-top: 45%;
+  margin-top: 66%;
 }/*# sourceMappingURL=style-restaurants.css.map */

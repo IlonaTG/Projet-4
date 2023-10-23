@@ -60,6 +60,143 @@
   padding-right: 13px;
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    rotate: 180deg;
+    transition-duration: 5s;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    rotate: 180deg;
+    transition-duration: 5s;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    background-color: #07fdf1;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+    background-color: transparent;
+  }
+}
+@keyframes loader {
+  12% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#card__loader {
+  position: absolute;
+  top: 0%;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+  z-index: 99999999999999;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #07fdf1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  opacity: 1;
+  animation: fadeInOut 9s linear forwards;
+}
+
+.loader {
+  color: #9356DC;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  border-radius: 8px;
+  animation: fadeOut 9s ease-in-out 3s forwards;
+}
+.loader p {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #FF79DA;
+  animation: loader 4s infinite;
+}
+
 body {
   margin: 0%;
 }
@@ -268,7 +405,7 @@ p {
   -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
-  transition: all 1s linear;
+  transition: all 2s linear;
 }
 
 .card .card__badge--nouveau {
