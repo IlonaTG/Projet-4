@@ -53,6 +53,30 @@
   padding-right: 13px;
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    rotate: 180deg;
+    transition-duration: 5s;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    rotate: 180deg;
+    transition-duration: 5s;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .main-container {
   height: 1750px;
 }
@@ -118,6 +142,21 @@ header {
 
 .menu__contain--desserts {
   padding-bottom: 10px;
+}
+
+.menu__contain--entree .menu__card {
+  animation: slideInFromLeft 3s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.menu__contain--plats .menu__card {
+  animation: slideInFromRight 3s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.menu__contain--desserts .menu__card {
+  animation: slideInFromLeft 3s ease-in-out;
+  animation-fill-mode: both;
 }
 
 .menu__card {

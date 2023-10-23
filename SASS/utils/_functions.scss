@@ -1,0 +1,25 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    50%{
+        rotate: 180deg;
+        transition-duration: 5s;
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight{
+    0% {
+        transform: translateX(100%);
+      }
+      50%{
+        rotate: 180deg;
+        transition-duration: 5s;
+    }
+      100% {
+        transform: translateX(0);
+      }
+  }
