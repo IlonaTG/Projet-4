@@ -16,7 +16,7 @@
 
 @mixin position__card--txt{
     display: flex;
-	align-items: center;
+	flex-direction: row;
 	justify-content: space-between;
 }
 
@@ -25,9 +25,6 @@
     justify-content: center;
     flex-direction: column;
 }
-
-
-
 
 
 @mixin padding10px{

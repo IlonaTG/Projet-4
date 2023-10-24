@@ -25,14 +25,16 @@
   }
   @keyframes fadeInOut {
     0% {
-      background-color: $bg__color--loader;
+      background: linear-gradient ($secondary__color, $primary__color);
       z-index: 9999;
+      opacity: 1;
+    }
+    95%{
+      opacity: 1;
     }
     100% {
       opacity: 0;
-      display: none;
-      z-index: -1;
-      background-color: transparent;
+      visibility: hidden;
     }
   }
 

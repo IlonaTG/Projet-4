@@ -7,25 +7,21 @@
 @import "./utils/functions";
 
 
-#card__loader {
-	position: absolute;
-	top: 0%;
-	bottom: 0;
-	left: 0%;
-	right: 0;
-	z-index: 99999999999999;
-	box-sizing: border-box;
-	margin: 0;
-	background-color: $bg__color--loader;
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-  opacity: 1;
-  animation: fadeInOut 9s linear forwards;
+.card__loader {
+	background: linear-gradient($secondary__color, $primary__color);
+    overflow: hidden;
+    position: fixed;
+	display: flex;
+	justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  	animation: fadeInOut 3s linear forwards;
   
 }
 .loader {
-	color: $primary__color;
+	color: $loader__color--word;
 	font-family: $font__family--Poppins;
 	font-weight: 500;
 	font-size: 25px;
@@ -33,16 +29,14 @@
 	box-sizing: content-box;
 	height: 40px;
 	padding: 4%;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	position: relative;
 	top:50%;
-	
 	border-radius: 8px;
 	animation: fadeOut 9s ease-in-out 3s forwards;
 	p{
+		margin: 0;
 		font-size: 25px;
 		font-weight: 900;
 	}
@@ -53,27 +47,23 @@
 	&::after {
 		content: "";
 		position: absolute;
-		inset: 0;
 		
-		z-index: 20;
 	}
 }
 .word {
 	display: block;
 	height: 100%;
 	padding-left: 6px;
-	color: $secondary__color;
+	color: $loader__color--words;
 	animation: loader 4s infinite;
 }
-
-
 
 body {
 	margin: 0%;
 }
 .main-container {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	max-width: 767px;
 	padding: 0%;
 	margin: 0%;
@@ -129,6 +119,7 @@ p {
 }
 .process__steps{
     margin-bottom: 40px;
+	@include position__colonne;
 }
 
 .process__title {
@@ -151,6 +142,8 @@ p {
 	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
 	position: relative;
 	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
 	.process__icon {
 		.process__text {
 			display: flex;
@@ -181,7 +174,10 @@ p {
 
 .process__number {
     @include position;
-	position: absolute;
+	position:absolute;
+	left: -15px;
+
+	
 	width: 24px;
 	height: 24px;
 	border-radius: 25px;
@@ -189,7 +185,7 @@ p {
 	background-color: $primary__color;
 	text-align: center;
 	color: $text__color--white;
-	transform: translate(-140px, 0px);
+	
 }
 
 .restaurants {
@@ -201,6 +197,9 @@ p {
 	font-size: 24px;
 	font-weight: 700;
     font-family: $font__family--Roboto;
+}
+article .card{
+	display: block;
 }
 
 .restaurants__cards {
@@ -214,8 +213,10 @@ p {
 	img {
 		width: 100%;
 		height: 174px;
+		object-fit: cover;
 		border-radius: 15px 15px 0px 0px;
 		position: relative;
+	
 	}
 	a {
 		text-decoration: none;
@@ -224,6 +225,7 @@ p {
 		text-align: left;
 		width: 29%;
         font-family: $font__family--Roboto;
+		
 	}
 	.card__txt {
         @include position__hpcard--txt;
@@ -247,23 +249,24 @@ p {
 		font-weight: 300;
 	}
 }
-.card__icon--heart {
+.card__icon--heart{
 	i {
-		position: absolute;
-		transform: translate(37vh, -9vh);
+		position: relative;
+		top: -55px;
+		left: 85%;
 	}
 }
 
 .icon__heart--full {
 	opacity: 0;
-	&:active {
+	&:hover {
 		opacity: 1;
 		background-color: linear-gradient($secondary__color, $primary__color);
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: $color__transparent;
 		cursor: pointer;
-		transition: all 2s linear;
+		transition: all 3s linear;
 	}
 }
 
@@ -274,12 +277,12 @@ p {
     color: #008766;
     border: 2px solid #99E2D0;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    transform: translate(28vh, -36vh);
-    
+	position: absolute;
+	
   }
 
-  .card__badge--nouveau p{
+
+.card__badge--nouveau p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,3 +295,65 @@ p {
 
 @import "./layout/footer";
 
+@media screen and (min-width: 768px) and (max-width:1023px) {
+	
+	.main-container {
+		max-width: 1023px;
+		
+	}
+
+	.btn{
+		margin-left: auto;
+		margin-right: auto;
+}
+	.process__step{
+		margin-left: auto;
+		margin-right: auto;
+}
+}
+
+@media screen and (min-width: 1024px) and (max-width:1440px){
+	.main-container {
+		max-width: 1440px;
+		
+	}
+	.process__step{
+		width: 45%;
+		margin-left: 0%;
+		
+		
+	}
+	.process__steps{
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 25px;
+		width: 80%;
+		margin-left: 11%;
+	}
+	.process__title{
+		padding-left: 10%;
+	}
+	.restaurants{
+		height: auto;
+	}
+	.restaurants__title{
+		padding-left: 9%;
+	}
+	.restaurants__cards{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-left: 9%;
+		margin-right: auto;
+		a{
+			width: 36%;
+			height: 251px;
+			margin-bottom: 45px;
+			margin-right: 11%;
+		}
+	}
+
+
+
+}

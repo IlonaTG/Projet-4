@@ -5,18 +5,22 @@
 @import "./layout/footer";
 @import "./utils/functions";
 
-.main-container{
-    height: 1750px;
+#card__loader{
+	display: none;
 }
-.menu__image {
+.menu__image{
 	img {
 		width: 100%;
 		height: 275px;
 		position: absolute;
-	}
+		object-fit: cover;
 }
+}
+
 .fa-arrow-left {
 	color: $text__color--black;
+	position: absolute;
+	left: 5%;
 }
 header {
 	@include position;
@@ -29,6 +33,7 @@ header {
 	overflow: hidden;
 	position: relative;
 	top: 220px;
+	padding-bottom: 220px;
     font-family: $font__family--Roboto;
 }
 .menu__title {
@@ -62,46 +67,52 @@ header {
 .menu__contain--desserts {
 		@include padding10px;
 }
+
 .menu__contain--entree .menu__card{
     animation: slideInFromLeft 3s ease-in-out;
     animation-fill-mode: both;
+	animation-delay: 2s;
 }
 .menu__contain--plats .menu__card{
     animation: slideInFromRight 3s ease-in-out;
     animation-fill-mode: both;
+	animation-delay: 5s;
 }
 .menu__contain--desserts .menu__card{
     animation: slideInFromLeft 3s ease-in-out;
     animation-fill-mode: both;
+	animation-delay: 8s;
 }
-.menu__card {
-    @include position__colonne;
-	width: 88%;
-	height: 72px;
+.menu__contain--entree{
+	@include position__colonne;
+  }
+  
+  .menu__card {
+	background: white;
 	border: 1px solid $text__color--white;
-	background-color: $bg__color--white;
-	box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
-	border-radius: 20px;
-	margin: 0 15px;
-	padding-left: 10px;
-	margin-bottom: 20px;
-	cursor: pointer;
-	&:hover {
-		.dish__name {
-			width: 80%;
-			transition: 950ms;
-			white-space: nowrap;
-            
-			text-overflow: ellipsis;
+	  background-color: $bg__color--white;
+	  box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
+	border-radius: 25px;
+	padding: 10px;
+	width: 83%;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	font-family: "roboto", sans-serif;
+	@include position__colonne;
+	&:hover{
+		.menu__card--contain h3{
+			@include ellipsis;
+			margin-right: 25%;
+			transition: 800ms;
 		}
-		.dish__description {
-		    @include ellipsis;
-			margin-right: 5%;
-			
+		.dish__descriptionandprice h4{
+			@include ellipsis;
 		}
 		.dish__price {
 			margin-right: 25%;
-			transition: 700ms;
+			transition: 800ms;
 		}
 		.dish__choise {
 			visibility: visible;
@@ -115,25 +126,38 @@ header {
 		}
 	}
 }
-.dish__name {
+
+  .menu__card--contain{
+	width:100%;
+	height: auto;
+  }
+  .menu__card--contain .dish__descriptionandprice{
+	@include position__card--txt;
+	width: 100%;
+	flex-wrap: nowrap;
+  }
+  
+  .menu__card--contain h3{
+	margin:0;
+	padding: 0%;
 	font-size: 18px;
 	font-weight: 600;
-	margin-top: 22%;
 }
-.dish__descriptionandprice {
-	@include position__card--txt;
-	position: relative;
-	top: -40px;
+.dish__descriptionandprice{
+	margin: 0%;
+	padding: 0%;
 }
-.dish__description {
+.dish__descriptionandprice h4{
 	font-size: 15px;
 	font-weight: 300;
+	margin: 0%;
 }
-.dish__price {
-	margin-right: 5%;
+.dish__descriptionandprice h5{
 	font-size: 15px;
 	font-weight: 700;
+	margin: 0%;
 }
+
 .dish__choise {
 	position: absolute;
 	margin-left: 81%;
@@ -141,14 +165,13 @@ header {
 	button {
 	    @include position;
 		width: 70px;
-		height: 75px;
+		height: 73px;
 		background-color: $tertiary__color;
 		border: none;
 		border-top-right-radius: 15px;
 		border-bottom-right-radius: 15px;
 		cursor: pointer;
-		position: relative;
-}
+	}
 	
 	i {
 	    @include position;
@@ -164,9 +187,12 @@ header {
 
 .btn {
 	width: 50%;
-	margin-left: 25%;
+	margin-left: 10%;
+	padding-bottom: 0;
     
 }
-.footer {
-	margin-top: 66%;
+
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+
 }

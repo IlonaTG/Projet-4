@@ -19,6 +19,18 @@
     </head>
 
     <body>
+        <section class="card__loader">
+            <div class="loader">
+              <p>loading</p>
+              <div class="words">
+                <span class="word">ohmyfood</span>
+                <span class="word">la palette du goût</span>
+                <span class="word">la note enchantée</span>
+                <span class="word">à la française</span>
+                <span class="word">la dèlice des sens</span>
+              </div>
+            </div>
+        </section>
         <div class="main-container">
             <header>
                 <div class="logo">
@@ -35,7 +47,7 @@
                 <section class="section__bg-color">
                     <h1>Réservez le menu qui vous convient</h1>
                     <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                    <a class="btn" href="#">Explorer nos restaurants</a>
+                    <a class="btn" href="#restos">Explorer nos restaurants</a>
                 </section>
             </header>
             <main>
@@ -61,7 +73,7 @@
                      </div>
                     </div>
                 </section>
-                <section class="restaurants">
+                <section class="restaurants" id="restos">
                     <div class="restaurants__title">
                         <h3>Restaurants</h3>
                     </div>
@@ -69,6 +81,7 @@
                         <a href="./restaurants/menu-la_palette_du_goût.html">
                             <article class="card">
                                 <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"/>
+                                <p class="card__badge--nouveau">Nouveau</p>
                                 <div class="card__contect">
                                     <div class="card__txt">
                                         <h4 class="card__title">La palette du goût</h4>
@@ -79,31 +92,27 @@
                                         <i class="fa-solid fa-heart icon__heart--full"></i> 
                                     </div>
                                 </div>
-                                <div class="card__badge--nouveau"> 
-                                    <p>Nouveau</p>
-                                </div>
                             </article>
                         </a>
                         
-                        <a href="./restaurants/menu-le_delice_des_sens.html">
+                        <a href="./restaurants/menu-la_note_enchantee.html">
                             <article class="card">
                                 <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée"/>
+                                <p class="card__badge--nouveau">Nouveau</p>
                                 <div class="card__contect">
                                     <div class="card__txt">
                                         <h4 class="card__title">La note enchantée</h4>
                                         <p class="card__subtitle">Charonne</p>
                                     </div>
                                     <div class="card__icon--heart">
-                                        <i class="fa-regular fa-heart icon__heart--empty"></i>
-                                        <i class="fa-solid fa-heart icon__heart--full"></i> 
-                                    </div>
+                                    <i class="fa-regular fa-heart icon__heart--empty"></i>
+                                    <i class="fa-solid fa-heart icon__heart--full"></i> 
                                 </div>
-                                <div class="card__badge--nouveau">
-                                    <p>Nouveau</p>
                                 </div>
+                                
                             </article>
                         </a>
-                        <a href="./restaurants/menu-la_note_enchantee.html">
+                        <a href="./restaurants/menu-a_la_française.html">
                             <article class="card">
                                 <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française"/>
                                     <div class="card__contect">
@@ -116,12 +125,9 @@
                                             <i class="fa-solid fa-heart icon__heart--full"></i> 
                                         </div>
                                     </div>
-                                    <div class="card__badge--nouveau">
-                                        <p>Nouveau</p>
-                                    </div>
                             </article>
                         </a>
-                        <a href="./restaurants/menu-a_la_française.html">
+                        <a href="./restaurants/menu-le_delice_des_sens.html">
                             <article class="card">
                                 <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens"/>
                                     <div class="card__contect">
@@ -134,25 +140,10 @@
                                             <i class="fa-solid fa-heart icon__heart--full"></i> 
                                         </div>
                                     </div>
-                                    <div class="card__badge--nouveau">
-                                        <p>Nouveau</p>
-                                    </div>
                             </article>
                         </a>
                     </div>
                 </section>
-                <div id="card__loader">
-                    <div class="loader">
-                      <p>loading</p>
-                      <div class="words">
-                        <span class="word">ohmyfood</span>
-                        <span class="word">la palette du goût</span>
-                        <span class="word">la note enchantée</span>
-                        <span class="word">à la française</span>
-                        <span class="word">la dèlice des sens</span>
-                      </div>
-                    </div>
-                  </div>
             </main>
             <footer>
                 <div class="footer">

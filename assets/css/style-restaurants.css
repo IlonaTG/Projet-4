@@ -7,7 +7,8 @@
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
-  margin-left: 15%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 50px;
   color: #FFFFFF;
   text-decoration: none;
@@ -16,18 +17,25 @@
   font-family: "Roboto", sans-serif;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .btn {
+    margin-left: 45%;
+  }
+}
 .footer {
   background-color: #353535;
   width: 100%;
-  height: 195px;
+  height: 180px;
   position: absolute;
+  padding-top: 0%;
+  padding-bottom: 50px;
 }
 
 .footer__title {
   color: #FFFFFF;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 25px;
   font-style: italic;
+  padding-top: 1px;
   padding-left: 15px;
   font-family: "Shrikhand", sans-serif;
 }
@@ -53,6 +61,20 @@
   padding-right: 13px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .footer {
+    height: 114px;
+  }
+  .footer__title {
+    position: relative;
+    top: 64px;
+    left: 85%;
+  }
+  .footer__links {
+    flex-direction: row;
+    margin-left: 25%;
+  }
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -79,14 +101,16 @@
 }
 @keyframes fadeInOut {
   0% {
-    background-color: #07fdf1;
+    background: linear-gradient #FF79DA, #9356DC;
     z-index: 9999;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    display: none;
-    z-index: -1;
-    background-color: transparent;
+    visibility: hidden;
   }
 }
 @keyframes loader {
@@ -131,18 +155,21 @@
     opacity: 0;
   }
 }
-.main-container {
-  height: 1750px;
+#card__loader {
+  display: none;
 }
 
 .menu__image img {
   width: 100%;
   height: 275px;
   position: absolute;
+  object-fit: cover;
 }
 
 .fa-arrow-left {
   color: #000000;
+  position: absolute;
+  left: 5%;
 }
 
 header {
@@ -159,6 +186,7 @@ header {
   overflow: hidden;
   position: relative;
   top: 220px;
+  padding-bottom: 220px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -201,48 +229,59 @@ header {
 .menu__contain--entree .menu__card {
   animation: slideInFromLeft 3s ease-in-out;
   animation-fill-mode: both;
+  animation-delay: 2s;
 }
 
 .menu__contain--plats .menu__card {
   animation: slideInFromRight 3s ease-in-out;
   animation-fill-mode: both;
+  animation-delay: 5s;
 }
 
 .menu__contain--desserts .menu__card {
   animation: slideInFromLeft 3s ease-in-out;
   animation-fill-mode: both;
+  animation-delay: 8s;
 }
 
-.menu__card {
+.menu__contain--entree {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 88%;
-  height: 72px;
+}
+
+.menu__card {
+  background: white;
   border: 1px solid #FFFFFF;
   background-color: #FFFFFF;
   box-shadow: -1px 3px 10px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  margin: 0 15px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
+  border-radius: 25px;
+  padding: 10px;
+  width: 83%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  font-family: "roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.menu__card:hover .dish__name {
-  width: 80%;
-  transition: 950ms;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.menu__card:hover .dish__description {
+.menu__card:hover .menu__card--contain h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 5%;
+  margin-right: 25%;
+  transition: 800ms;
+}
+.menu__card:hover .dish__descriptionandprice h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__card:hover .dish__price {
   margin-right: 25%;
-  transition: 700ms;
+  transition: 800ms;
 }
 .menu__card:hover .dish__choise {
   visibility: visible;
@@ -255,29 +294,41 @@ header {
   transition: transform 2s;
 }
 
-.dish__name {
+.menu__card--contain {
+  width: 100%;
+  height: auto;
+}
+
+.menu__card--contain .dish__descriptionandprice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.menu__card--contain h3 {
+  margin: 0;
+  padding: 0%;
   font-size: 18px;
   font-weight: 600;
-  margin-top: 22%;
 }
 
 .dish__descriptionandprice {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  top: -40px;
+  margin: 0%;
+  padding: 0%;
 }
 
-.dish__description {
+.dish__descriptionandprice h4 {
   font-size: 15px;
   font-weight: 300;
+  margin: 0%;
 }
 
-.dish__price {
-  margin-right: 5%;
+.dish__descriptionandprice h5 {
   font-size: 15px;
   font-weight: 700;
+  margin: 0%;
 }
 
 .dish__choise {
@@ -290,13 +341,12 @@ header {
   justify-content: center;
   align-items: center;
   width: 70px;
-  height: 75px;
+  height: 73px;
   background-color: #99E2D0;
   border: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   cursor: pointer;
-  position: relative;
 }
 .dish__choise i {
   display: flex;
@@ -312,9 +362,6 @@ header {
 
 .btn {
   width: 50%;
-  margin-left: 25%;
-}
-
-.footer {
-  margin-top: 66%;
+  margin-left: 10%;
+  padding-bottom: 0;
 }/*# sourceMappingURL=style-restaurants.css.map */
