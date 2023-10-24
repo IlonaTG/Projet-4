@@ -19,7 +19,15 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .btn {
-    margin-left: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
   }
 }
 .footer {
@@ -62,8 +70,11 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  footer {
+    margin-top: 20px;
+  }
   .footer {
-    height: 114px;
+    height: 100px;
   }
   .footer__title {
     position: relative;
@@ -210,7 +221,7 @@ header {
 }
 
 .bordered__title {
-  margin-left: 15px;
+  margin-left: 5%;
   border-bottom: 4px solid #99E2D0;
 }
 
@@ -274,14 +285,14 @@ header {
   margin-right: 25%;
   transition: 800ms;
 }
+.menu__card:hover .menu__card--contain h3 .dish__price {
+  margin-right: 25%;
+  transition: 800ms;
+}
 .menu__card:hover .dish__descriptionandprice h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu__card:hover .dish__price {
-  margin-right: 25%;
-  transition: 800ms;
 }
 .menu__card:hover .dish__choise {
   visibility: visible;
@@ -294,9 +305,10 @@ header {
   transition: transform 2s;
 }
 
-.menu__card--contain {
+.menu__card .menu__card--contain {
   width: 100%;
   height: auto;
+  margin-left: 0%;
 }
 
 .menu__card--contain .dish__descriptionandprice {
@@ -333,7 +345,7 @@ header {
 
 .dish__choise {
   position: absolute;
-  margin-left: 81%;
+  margin-left: 89%;
   visibility: hidden;
 }
 .dish__choise button {
@@ -364,4 +376,46 @@ header {
   width: 50%;
   margin-left: 10%;
   padding-bottom: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dish__choise {
+    margin-left: 92%;
+  }
+  .menu__card:hover .dish__price {
+    margin-right: 10%;
+    transition: 600ms;
+  }
+  .menu__card:hover .dish__choise {
+    margin-right: 60%;
+    transition: all 1s;
+    transform: translate(-30%, 0%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .menu__restaurant {
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 245px;
+  }
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dish__choise {
+    margin-left: 94%;
+  }
+  .menu__card:hover .dish__price {
+    margin-right: 7%;
+    transition: 600ms;
+  }
+  .menu__card:hover .dish__choise {
+    margin-right: 70%;
+    transition: all 1s;
+    transform: translate(-30%, 0%);
+  }
 }/*# sourceMappingURL=style-restaurants.css.map */

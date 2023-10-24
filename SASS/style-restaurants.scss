@@ -54,12 +54,11 @@ header {
 	}
 }
 .bordered__title {
-	margin-left: 15px;
+margin-left: 5%;
 	border-bottom: 4px solid $tertiary__color;
 }
 .menu__contain--entree {
 	@include padding10px;
-    
 }
 .menu__contain--plats {
 		@include padding10px;
@@ -104,16 +103,16 @@ header {
 	&:hover{
 		.menu__card--contain h3{
 			@include ellipsis;
+	.dish__price {
 			margin-right: 25%;
+			transition: 800ms;
+		}		margin-right: 25%;
 			transition: 800ms;
 		}
 		.dish__descriptionandprice h4{
 			@include ellipsis;
 		}
-		.dish__price {
-			margin-right: 25%;
-			transition: 800ms;
-		}
+		
 		.dish__choise {
 			visibility: visible;
 			margin-right: 60%;
@@ -127,9 +126,10 @@ header {
 	}
 }
 
-  .menu__card--contain{
+  .menu__card .menu__card--contain{
 	width:100%;
 	height: auto;
+	margin-left: 0%
   }
   .menu__card--contain .dish__descriptionandprice{
 	@include position__card--txt;
@@ -160,7 +160,7 @@ header {
 
 .dish__choise {
 	position: absolute;
-	margin-left: 81%;
+	margin-left: 89%;
 	visibility: hidden;
 	button {
 	    @include position;
@@ -194,5 +194,54 @@ header {
 
 
 @media screen and (min-width: 768px) and (max-width:1023px){
+.btn{
+	margin-left: auto;
+	margin-right: auto;
+}
+.dish__choise{
+	margin-left: 92%;
 
+}
+.menu__card{
+	&:hover{
+		.dish__price {
+			margin-right: 10%;
+			transition: 600ms;
+		}
+		.dish__choise{
+			margin-right: 60%;
+			transition: all 1s;
+			transform: translate(-30%, 0%);
+		}
+	}
+}
+}
+
+@media screen and (min-width: 1024px) and (max-width:1440px){
+	.menu__restaurant{
+		margin-left: 10%;
+		margin-right: 10%;
+		top: 245px;
+	}
+	.btn{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.dish__choise{
+		margin-left: 94%;
+	
+	}
+	.menu__card{
+		&:hover{
+			.dish__price {
+				margin-right: 7%;
+				transition: 600ms;
+			}
+			.dish__choise{
+				margin-right: 70%;
+				transition: all 1s;
+				transform: translate(-30%, 0%);
+			}
+		}
+	}
 }
