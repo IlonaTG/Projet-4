@@ -53,12 +53,27 @@ header {
 		top: 35px;
 	}
 }
+.restaurant__favorite .icon__heart--full {
+	opacity: 0;
+	&:hover {
+		opacity: 1;
+		background-image: linear-gradient($secondary__color, $primary__color);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: $color__transparent;
+		cursor: pointer;
+		transition: all 2s linear;
+	}
+}
+
 .bordered__title {
 margin-left: 5%;
 	border-bottom: 4px solid $tertiary__color;
 }
 .menu__contain--entree {
 	@include padding10px;
+	@include position__colonne;
+	
 }
 .menu__contain--plats {
 		@include padding10px;
@@ -89,8 +104,8 @@ margin-left: 5%;
   .menu__card {
 	background: white;
 	border: 1px solid $text__color--white;
-	  background-color: $bg__color--white;
-	  box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
+	background-color: $bg__color--white;
+	box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
 	border-radius: 25px;
 	padding: 10px;
 	width: 83%;
@@ -103,21 +118,22 @@ margin-left: 5%;
 	&:hover{
 		.menu__card--contain h3{
 			@include ellipsis;
-	.dish__price {
-			margin-right: 25%;
-			transition: 800ms;
-		}		margin-right: 25%;
-			transition: 800ms;
+			margin-right: 20%;
+			transition-delay: 500ms;
 		}
+			.dish__price {
+				margin-right: 25%;
+				transition: 1200ms;
+				}
+		
 		.dish__descriptionandprice h4{
 			@include ellipsis;
 		}
 		
 		.dish__choise {
 			visibility: visible;
-			margin-right: 60%;
 			transition: all 2s;
-			transform: translate(-30%, 0%);
+			transform: translate(-40px, 0%);
 			i {
 				transform: rotate(2turn);
 				transition: transform 2s;
@@ -159,10 +175,7 @@ margin-left: 5%;
 }
 
 .dish__choise {
-	position: absolute;
-	margin-left: 89%;
 	visibility: hidden;
-	button {
 	    @include position;
 		width: 70px;
 		height: 73px;
@@ -171,8 +184,14 @@ margin-left: 5%;
 		border-top-right-radius: 15px;
 		border-bottom-right-radius: 15px;
 		cursor: pointer;
+		position: fixed;
+		margin-left: 89%;
+		margin-right: 5%;
+		top: -2px;
+	button{
+		border: none;
+		background-color: $tertiary__color;
 	}
-	
 	i {
 	    @include position;
 		width: 20px;
@@ -186,8 +205,9 @@ margin-left: 5%;
 }
 
 .btn {
-	width: 50%;
-	margin-left: 10%;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-bottom: 0;
     
 }
@@ -222,6 +242,17 @@ margin-left: 5%;
 		margin-left: 10%;
 		margin-right: 10%;
 		top: 245px;
+	}
+	.menu__contain--entree{
+		h2{
+			padding-left: 15px;
+		}
+	}
+	.menu__title{
+		.restaurant__favorite{
+			position: relative;
+			top: -38px;
+		}
 	}
 	.btn{
 		margin-left: auto;

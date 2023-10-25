@@ -220,6 +220,19 @@ header {
   top: 35px;
 }
 
+.restaurant__favorite .icon__heart--full {
+  opacity: 0;
+}
+.restaurant__favorite .icon__heart--full:hover {
+  opacity: 1;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  transition: all 2s linear;
+}
+
 .bordered__title {
   margin-left: 5%;
   border-bottom: 4px solid #99E2D0;
@@ -227,6 +240,9 @@ header {
 
 .menu__contain--entree {
   padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .menu__contain--plats {
@@ -282,12 +298,12 @@ header {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 25%;
-  transition: 800ms;
+  margin-right: 20%;
+  transition-delay: 500ms;
 }
-.menu__card:hover .menu__card--contain h3 .dish__price {
+.menu__card:hover .dish__price {
   margin-right: 25%;
-  transition: 800ms;
+  transition: 1200ms;
 }
 .menu__card:hover .dish__descriptionandprice h4 {
   white-space: nowrap;
@@ -296,9 +312,8 @@ header {
 }
 .menu__card:hover .dish__choise {
   visibility: visible;
-  margin-right: 60%;
   transition: all 2s;
-  transform: translate(-30%, 0%);
+  transform: translate(-40px, 0%);
 }
 .menu__card:hover .dish__choise i {
   transform: rotate(2turn);
@@ -344,11 +359,7 @@ header {
 }
 
 .dish__choise {
-  position: absolute;
-  margin-left: 89%;
   visibility: hidden;
-}
-.dish__choise button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,6 +370,14 @@ header {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   cursor: pointer;
+  position: fixed;
+  margin-left: 89%;
+  margin-right: 5%;
+  top: -2px;
+}
+.dish__choise button {
+  border: none;
+  background-color: #99E2D0;
 }
 .dish__choise i {
   display: flex;
@@ -373,8 +392,9 @@ header {
 }
 
 .btn {
-  width: 50%;
-  margin-left: 10%;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 0;
 }
 
@@ -401,6 +421,13 @@ header {
     margin-left: 10%;
     margin-right: 10%;
     top: 245px;
+  }
+  .menu__contain--entree h2 {
+    padding-left: 15px;
+  }
+  .menu__title .restaurant__favorite {
+    position: relative;
+    top: -38px;
   }
   .btn {
     margin-left: auto;

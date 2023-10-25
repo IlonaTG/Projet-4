@@ -379,6 +379,9 @@ article .card {
   display: block;
 }
 
+.restaurants__cards {
+  position: relative;
+}
 .restaurants__cards .card {
   width: 100%;
   height: 251px;
@@ -386,12 +389,12 @@ article .card {
   background-color: #FFFFFF;
   margin-bottom: 20px;
 }
-.restaurants__cards img {
+.restaurants__cards .card img {
   width: 100%;
   height: 174px;
   object-fit: cover;
-  border-radius: 15px 15px 0px 0px;
-  position: relative;
+  border-radius: 20px 20px 0 0;
+  z-index: -5555;
 }
 .restaurants__cards a {
   text-decoration: none;
@@ -416,6 +419,7 @@ article .card {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 .card__contect .card__title {
   margin: 0%;
@@ -429,42 +433,44 @@ article .card {
 }
 
 .card__icon--heart i {
-  position: relative;
-  top: -55px;
-  left: 85%;
+  position: absolute;
+  right: 40px;
+  z-index: 111;
+  bottom: 35px;
 }
 
-.icon__heart--full {
+.card__icon--heart .icon__heart--full {
   opacity: 0;
 }
-.icon__heart--full:hover {
+.card__icon--heart .icon__heart--full:hover {
   opacity: 1;
-  background-color: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
-  transition: all 3s linear;
+  transition: all 2s linear;
 }
 
-.card .card__badge--nouveau {
-  width: 80px;
-  height: 29px;
-  background-color: #99E2D0;
-  color: #008766;
-  border: 2px solid #99E2D0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  position: absolute;
+.restaurants__cards .card__badge--nouveau {
+  position: relative;
 }
 
-.card__badge--nouveau p {
+.restaurants__cards .card__badge--nouveau::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-  padding-top: 5px;
+  position: absolute;
+  content: "Nouveau";
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  border: 2px solid #99E2D0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 777;
+  margin-top: 15px;
+  margin-left: 12rem;
 }
 
 .footer {

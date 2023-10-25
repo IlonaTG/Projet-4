@@ -198,26 +198,30 @@ p {
 	font-weight: 700;
     font-family: $font__family--Roboto;
 }
+
 article .card{
 	display: block;
+	
 }
 
 .restaurants__cards {
+	position: relative;
 	.card {
 		width: 100%;
 		height: 251px;
 		border-radius: 15px;
 		background-color: $bg__color--white;
 		margin-bottom: 20px;
-	}
+		
+
 	img {
 		width: 100%;
 		height: 174px;
 		object-fit: cover;
-		border-radius: 15px 15px 0px 0px;
-		position: relative;
-	
+		border-radius: 20px 20px 0 0;
+	z-index: -5555;
 	}
+}
 	a {
 		text-decoration: none;
 		color: $text__color--black;
@@ -238,6 +242,7 @@ article .card{
 
 .card__contect {
 	@include position__colonne;
+	position: relative;
 	.card__title {
 		margin: 0%;
 		padding-bottom: 5px;
@@ -249,49 +254,51 @@ article .card{
 		font-weight: 300;
 	}
 }
+
 .card__icon--heart{
 	i {
-		position: relative;
-		top: -55px;
-		left: 85%;
+		position: absolute;
+		right: 40px;
+		z-index: 111;
+		bottom: 35px;
+		
 	}
 }
 
-.icon__heart--full {
+.card__icon--heart .icon__heart--full {
 	opacity: 0;
 	&:hover {
 		opacity: 1;
-		background-color: linear-gradient($secondary__color, $primary__color);
+		background-image: linear-gradient($secondary__color, $primary__color);
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: $color__transparent;
 		cursor: pointer;
-		transition: all 3s linear;
+		transition: all 2s linear;
 	}
 }
 
-.card .card__badge--nouveau {
-    width: 80px;
-    height: 29px;
-    background-color: #99E2D0;
-    color: #008766;
-    border: 2px solid #99E2D0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-	position: absolute;
+.restaurants__cards .card__badge--nouveau {
+ 	position: relative;
 	
-  }
+}
 
+	 .restaurants__cards .card__badge--nouveau::before{
+	@include position;
+	position: absolute;
+	content: "Nouveau";
+	color: #008766;
+	width: 80px;
+    height: 29px;
+	background-color: #99E2D0;
+	border: 2px solid #99E2D0;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 777;
+	margin-top: 15px;
+	margin-left: 12rem;
+	
+}
 
-.card__badge--nouveau p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: $font__family--Roboto;
-    padding-top: 5px;
-    
-  }
 
 @import "./layout/footer";
 
