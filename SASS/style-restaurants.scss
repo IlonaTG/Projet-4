@@ -26,7 +26,7 @@ header {
 	@include position;
 }
 .menu__restaurant {
-	height: 1240px;
+	height: auto;
 	background-color: $bg__color--lightgrey;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
@@ -188,7 +188,7 @@ margin-left: 5%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 0;
-    margin-bottom: 0%;
+    margin-bottom: 3rem;
 }
 
 
