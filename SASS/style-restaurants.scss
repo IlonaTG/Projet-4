@@ -72,144 +72,123 @@ margin-left: 5%;
 }
 .menu__contain--entree {
 	@include padding10px;
-	@include position__colonne;
+	
 	
 }
 .menu__contain--plats {
 		@include padding10px;
 }
 .menu__contain--desserts {
-		@include padding10px;
+	@include padding10px;
 }
 
-.menu__contain--entree .menu__card{
-    animation: slideInFromLeft 3s ease-in-out;
-    animation-fill-mode: both;
-	animation-delay: 2s;
-}
-.menu__contain--plats .menu__card{
-    animation: slideInFromRight 3s ease-in-out;
-    animation-fill-mode: both;
-	animation-delay: 5s;
-}
-.menu__contain--desserts .menu__card{
-    animation: slideInFromLeft 3s ease-in-out;
-    animation-fill-mode: both;
-	animation-delay: 8s;
-}
-.menu__contain--entree{
-	@include position__colonne;
-  }
-  
-  .menu__card {
+
+.menu__card--contain{
+	@include position;
 	background: white;
-	border: 1px solid $text__color--white;
+	position: relative;
+	border: $text__color--white;
 	background-color: $bg__color--white;
 	box-shadow: -1px 3px 10px 3px rgba(0,0,0,0.3);
-	border-radius: 25px;
+	border-radius: 20px;
 	padding: 10px;
-	width: 83%;
-	height: 50px;
+	width: 90%;
+	height: 60px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0%;
+	padding-top: 2px;
 	margin-bottom: 15px;
 	font-family: "roboto", sans-serif;
-	@include position__colonne;
-	&:hover{
-		.menu__card--contain h3{
-			@include ellipsis;
-			margin-right: 20%;
-			transition-delay: 500ms;
-		}
-			.dish__price {
-				margin-right: 25%;
-				transition: 1200ms;
-				}
-		
-		.dish__descriptionandprice h4{
-			@include ellipsis;
-		}
-		
-		.dish__choise {
-			visibility: visible;
-			transition: all 2s;
-			transform: translate(-40px, 0%);
-			i {
-				transform: rotate(2turn);
-				transition: transform 2s;
+	@include ellipsis;
+	&:hover{	
+		.dish__price{
+			transform: translateX(0);
+			margin-left: 20px;
+			.dish__choise{
+			  	background-color: $tertiary__color;
+			  	visibility: visible;
+				.fa-circle-check{
+					transform: rotate(2turn); 
+			  	}
 			}
+		}	
+		h3, h4{
+			@include ellipsis;
 		}
+		
 	}
-}
+} 
 
-  .menu__card .menu__card--contain{
-	width:100%;
-	height: auto;
-	margin-left: 0%
-  }
-  .menu__card--contain .dish__descriptionandprice{
-	@include position__card--txt;
-	width: 100%;
-	flex-wrap: nowrap;
-  }
-  
-  .menu__card--contain h3{
-	margin:0;
-	padding: 0%;
-	font-size: 18px;
-	font-weight: 600;
-}
-.dish__descriptionandprice{
-	margin: 0%;
-	padding: 0%;
-}
-.dish__descriptionandprice h4{
-	font-size: 15px;
-	font-weight: 300;
-	margin: 0%;
-}
-.dish__descriptionandprice h5{
-	font-size: 15px;
-	font-weight: 700;
-	margin: 0%;
-}
-
-.dish__choise {
-	visibility: hidden;
-	    @include position;
-		width: 70px;
-		height: 73px;
-		background-color: $tertiary__color;
-		border: none;
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
-		cursor: pointer;
-		position: fixed;
-		margin-left: 89%;
-		margin-right: 5%;
-		top: -2px;
-	button{
-		border: none;
-		background-color: $tertiary__color;
+	.dish__name{
+		  	background-color: white;
+			height:100%;
+			width: 100%;
+			margin-left: 9px;
+			background: transparent;
+			overflow: hidden;
+			
+			h3{
+			font-size: 17px;
+			font-weight: 600;
+			margin-top: 0%;
+			margin-bottom: 5px;
+			
+  			margin-top: 3px;
+			  
+			}
+			h4{
+			font-size: 15px;
+			font-weight: 300;
+			margin: 0%;
+			
+			
+			}
 	}
-	i {
-	    @include position;
-		width: 20px;
-		height: 20px;
-		border: 1px solid $text__color--white;
-		border-radius: 30px;
-		background-color: $bg__color--white;
-		color: $tertiary__color;
-    }
+		.dish__price{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 65px;
+			transform: translateX(40px);
+			transition: all 700ms;
+			margin: 0%;
+			
 	
-}
-
+		p{
+			font-size: 15px;
+			font-weight: 700;
+			margin-top: 4.3rem;
+			margin-right: 70px;
+			
+			
+		}
+		.dish__choise{
+			@include position;
+			position: absolute;
+			margin-left: 8px;
+			width: 50px;
+			height: 65px;
+			border-radius: 0 20px 20px 0;
+			visibility: hidden;
+			.fa-circle-check{
+				color:white;
+				font-size: 1rem;
+				transition: all 1s; 
+  			}
+  		}
+   	}
+  
+  
+  
+  
 .btn {
 	width: 160px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 0;
-    
+    margin-bottom: 0%;
 }
 
 

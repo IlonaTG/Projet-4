@@ -240,9 +240,6 @@ header {
 
 .menu__contain--entree {
   padding-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .menu__contain--plats {
@@ -253,142 +250,98 @@ header {
   padding-bottom: 10px;
 }
 
-.menu__contain--entree .menu__card {
-  animation: slideInFromLeft 3s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 2s;
-}
-
-.menu__contain--plats .menu__card {
-  animation: slideInFromRight 3s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 5s;
-}
-
-.menu__contain--desserts .menu__card {
-  animation: slideInFromLeft 3s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 8s;
-}
-
-.menu__contain--entree {
+.menu__card--contain {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-}
-
-.menu__card {
+  align-items: center;
   background: white;
-  border: 1px solid #FFFFFF;
+  position: relative;
+  border: #FFFFFF;
   background-color: #FFFFFF;
   box-shadow: -1px 3px 10px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 10px;
-  width: 83%;
-  height: 50px;
+  width: 90%;
+  height: 60px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0%;
+  padding-top: 2px;
   margin-bottom: 15px;
   font-family: "roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.menu__card:hover .menu__card--contain h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 20%;
-  transition-delay: 500ms;
-}
-.menu__card:hover .dish__price {
-  margin-right: 25%;
-  transition: 1200ms;
-}
-.menu__card:hover .dish__descriptionandprice h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__card:hover .dish__choise {
+.menu__card--contain:hover .dish__price {
+  transform: translateX(0);
+  margin-left: 20px;
+}
+.menu__card--contain:hover .dish__price .dish__choise {
+  background-color: #99E2D0;
   visibility: visible;
-  transition: all 2s;
-  transform: translate(-40px, 0%);
 }
-.menu__card:hover .dish__choise i {
+.menu__card--contain:hover .dish__price .dish__choise .fa-circle-check {
   transform: rotate(2turn);
-  transition: transform 2s;
+}
+.menu__card--contain:hover h3, .menu__card--contain:hover h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.menu__card .menu__card--contain {
+.dish__name {
+  background-color: white;
+  height: 100%;
   width: 100%;
-  height: auto;
-  margin-left: 0%;
+  margin-left: 9px;
+  background: transparent;
+  overflow: hidden;
 }
-
-.menu__card--contain .dish__descriptionandprice {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: nowrap;
-}
-
-.menu__card--contain h3 {
-  margin: 0;
-  padding: 0%;
-  font-size: 18px;
+.dish__name h3 {
+  font-size: 17px;
   font-weight: 600;
+  margin-top: 0%;
+  margin-bottom: 5px;
+  margin-top: 3px;
 }
-
-.dish__descriptionandprice {
-  margin: 0%;
-  padding: 0%;
-}
-
-.dish__descriptionandprice h4 {
+.dish__name h4 {
   font-size: 15px;
   font-weight: 300;
   margin: 0%;
 }
 
-.dish__descriptionandprice h5 {
-  font-size: 15px;
-  font-weight: 700;
+.dish__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 65px;
+  transform: translateX(40px);
+  transition: all 700ms;
   margin: 0%;
 }
-
-.dish__choise {
+.dish__price p {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 4.3rem;
+  margin-right: 70px;
+}
+.dish__price .dish__choise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: 8px;
+  width: 50px;
+  height: 65px;
+  border-radius: 0 20px 20px 0;
   visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 73px;
-  background-color: #99E2D0;
-  border: none;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  cursor: pointer;
-  position: fixed;
-  margin-left: 89%;
-  margin-right: 5%;
-  top: -2px;
 }
-.dish__choise button {
-  border: none;
-  background-color: #99E2D0;
-}
-.dish__choise i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #FFFFFF;
-  border-radius: 30px;
-  background-color: #FFFFFF;
-  color: #99E2D0;
+.dish__price .dish__choise .fa-circle-check {
+  color: white;
+  font-size: 1rem;
+  transition: all 1s;
 }
 
 .btn {
@@ -396,6 +349,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0;
+  margin-bottom: 0%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
