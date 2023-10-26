@@ -67,7 +67,7 @@ header {
 }
 
 .bordered__title {
-margin-left: 5%;
+	margin-left: 5%;
 	border-bottom: 4px solid $tertiary__color;
 }
 .menu__contain--entree {
@@ -210,21 +210,10 @@ margin-left: 5%;
 	margin-left: auto;
 	margin-right: auto;
 }
-.dish__choise{
-	margin-left: 92%;
-
-}
-.menu__card{
-	&:hover{
-		.dish__price {
-			margin-right: 10%;
-			transition: 600ms;
-		}
-		.dish__choise{
-			margin-right: 60%;
-			transition: all 1s;
-			transform: translate(-30%, 0%);
-		}
+.menu__title{
+	.restaurant__favorite{
+		position: relative;
+		top: -38px;
 	}
 }
 }
@@ -250,21 +239,6 @@ margin-left: 5%;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.dish__choise{
-		margin-left: 94%;
 	
-	}
-	.menu__card{
-		&:hover{
-			.dish__price {
-				margin-right: 7%;
-				transition: 600ms;
-			}
-			.dish__choise{
-				margin-right: 70%;
-				transition: all 1s;
-				transform: translate(-30%, 0%);
-			}
-		}
-	}
+	
 }
