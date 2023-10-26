@@ -333,13 +333,13 @@ p {
 .process__step:hover {
   background-color: #e0c7d9;
 }
+.process__step:hover .process__icon {
+  color: #9356DC;
+}
 
 .process__icon {
   color: #7E7E7E;
   margin-left: 20px;
-}
-.process__icon:hover {
-  color: #9356DC;
 }
 
 .process__text {

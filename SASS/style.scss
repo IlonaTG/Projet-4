@@ -155,6 +155,9 @@ p {
 .process__step {
 	&:hover {
 		background-color: #e0c7d9;
+		.process__icon{
+			color: $primary__color;
+		}
 	}
 	margin-bottom: 20px;
     border: none;
@@ -162,9 +165,7 @@ p {
 .process__icon {
 	color: #7E7E7E;
 	margin-left: 20px;
-	&:hover {
-		color: $primary__color;
-	}
+	
 }
 .process__text {
 	font-size: 16px;
