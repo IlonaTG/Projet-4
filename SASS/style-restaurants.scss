@@ -120,49 +120,41 @@ header {
 	}
 } 
 
-	.dish__name{
-		  	background-color: white;
-			height:100%;
-			width: 100%;
-			margin-left: 9px;
-			background: transparent;
-			overflow: hidden;
+.dish__name{
+	background-color: white;
+	height:100%;
+	width: 100%;
+	margin-left: 9px;
+	background: transparent;
+	overflow: hidden;
 			
-			h3{
-			font-size: 17px;
-			font-weight: 600;
-			margin-top: 0%;
-			margin-bottom: 5px;
-			
-  			margin-top: 3px;
-			  
-			}
-			h4{
-			font-size: 15px;
-			font-weight: 300;
-			margin: 0%;
-			
-			
-			}
+	h3{
+		font-size: 17px;
+		font-weight: 600;
+		margin-top: 0%;
+		margin-bottom: 5px;
+		margin-top: 3px;
 	}
-		.dish__price{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 50px;
-			height: 65px;
-			transform: translateX(40px);
-			transition: all 700ms;
-			margin: 0%;
-			
-	
+	h4{
+		font-size: 15px;
+		font-weight: 300;
+		margin: 0%;
+	}
+}
+.dish__price{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 65px;
+	transform: translateX(40px);
+	transition: all 700ms;
+	margin: 0%;
 		p{
 			font-size: 15px;
 			font-weight: 700;
 			margin-top: 4.3rem;
-			margin-right: 70px;
-			
-			
+			margin-right: 70px;	
 		}
 		.dish__choise{
 			@include position;
@@ -178,7 +170,7 @@ header {
 				transition: all 1s; 
   			}
   		}
-   	}
+	}
 .menu__contain--entree{
 		animation: slideInFromLeft 3s ease-in-out;
 		animation-fill-mode: both;
@@ -193,9 +185,6 @@ header {
 		animation-fill-mode: both;
 		animation-delay: 4s;
 }  
-  
-  
-  
 .btn {
 	width: 160px;
 	margin-left: auto;
@@ -206,16 +195,16 @@ header {
 
 
 @media screen and (min-width: 768px) and (max-width:1023px){
-.btn{
-	margin-left: auto;
-	margin-right: auto;
-}
-.menu__title{
-	.restaurant__favorite{
-		position: relative;
-		top: -38px;
+	.btn{
+		margin-left: auto;
+		margin-right: auto;
 	}
-}
+	.menu__title{
+		.restaurant__favorite{
+			position: relative;
+			top: -38px;
+		}
+	}
 }
 
 @media screen and (min-width: 1024px) and (max-width:1440px){
@@ -224,7 +213,6 @@ header {
 		margin-right: 10%;
 		top: 245px;
 	}
-	
 	.menu__title{
 		.restaurant__favorite{
 			position: relative;
@@ -235,6 +223,5 @@ header {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
-	
+
 }
