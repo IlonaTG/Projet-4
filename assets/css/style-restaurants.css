@@ -344,6 +344,23 @@ header {
   transition: all 1s;
 }
 
+.menu__contain--entree {
+  animation: slideInFromLeft 3s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.menu__contain--plats {
+  animation: slideInFromRight 3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.menu__contain--desserts {
+  animation: slideInFromLeft 3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+
 .btn {
   width: 160px;
   margin-left: auto;
