@@ -91,7 +91,7 @@
     transform: translateX(-100%);
   }
   50% {
-    rotate: 180deg;
+    transform: rotate(180deg);
     transition-duration: 5s;
   }
   100% {
@@ -103,7 +103,7 @@
     transform: translateX(100%);
   }
   50% {
-    rotate: 180deg;
+    transform: rotate(180deg);
     transition-duration: 5s;
   }
   100% {
@@ -112,7 +112,7 @@
 }
 @keyframes fadeInOut {
   0% {
-    background: linear-gradient #FF79DA, #9356DC;
+    background-color: linear-gradient #FF79DA, #9356DC;
     z-index: 9999;
     opacity: 1;
   }
@@ -209,7 +209,7 @@ header {
 
 .menu_title--name {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28;
+  font-size: 28px;
   font-style: italic;
   margin-left: 0%;
 }
@@ -384,9 +384,6 @@ header {
     margin-left: 10%;
     margin-right: 10%;
     top: 245px;
-  }
-  .menu__contain--entree h2 {
-    padding-left: 15px;
   }
   .menu__title .restaurant__favorite {
     position: relative;

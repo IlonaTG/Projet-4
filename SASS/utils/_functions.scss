@@ -3,7 +3,7 @@
       transform: translateX(-100%);
     }
     50%{
-        rotate: 180deg;
+        transform: rotate(180deg);
         transition-duration: 5s;
     }
     100% {
@@ -16,7 +16,7 @@
         transform: translateX(100%);
       }
       50%{
-        rotate: 180deg;
+        transform: rotate(180deg);
         transition-duration: 5s;
     }
       100% {
@@ -25,7 +25,7 @@
   }
   @keyframes fadeInOut {
     0% {
-      background: linear-gradient ($secondary__color, $primary__color);
+      background-color: linear-gradient ($secondary__color, $primary__color);
       z-index: 9999;
       opacity: 1;
     }

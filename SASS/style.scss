@@ -220,7 +220,7 @@ article .card{
 		height: 174px;
 		object-fit: cover;
 		border-radius: 20px 20px 0 0;
-	z-index: -5555;
+		z-index: -5555;
 	}
 }
 	a {
@@ -264,42 +264,38 @@ article .card{
 		bottom: 35px;
 		
 	}
-}
-
-.card__icon--heart .icon__heart--full {
-	opacity: 0;
-	&:hover {
-		opacity: 1;
-		background-image: linear-gradient($secondary__color, $primary__color);
-		background-clip: text;
-		-webkit-background-clip: text;
-		color: $color__transparent;
-		cursor: pointer;
-		transition: all 2s linear;
+	.icon__heart--full {
+		opacity: 0;
+		&:hover {
+			opacity: 1;
+			background-image: linear-gradient($secondary__color, $primary__color);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: $color__transparent;
+			cursor: pointer;
+			transition: all 2s linear;
+		}
 	}
 }
 
-.restaurants__cards .card__badge--nouveau {
- 	position: relative;
-	
+.restaurants__cards {
+	.card__badge--nouveau {
+		&::before{
+			@include position;
+			position: absolute;
+			content: "Nouveau";
+			color: #008766;
+			width: 80px;
+    		height: 29px;
+			background-color: #99E2D0;
+			border: 2px solid #99E2D0;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+			z-index: 777;
+			margin-top: 15px;
+			margin-left: 12rem;
+		}	
+	}
 }
-
-	 .restaurants__cards .card__badge--nouveau::before{
-	@include position;
-	position: absolute;
-	content: "Nouveau";
-	color: #008766;
-	width: 80px;
-    height: 29px;
-	background-color: #99E2D0;
-	border: 2px solid #99E2D0;
-	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-	z-index: 777;
-	margin-top: 15px;
-	margin-left: 12rem;
-	
-}
-
 
 @import "./layout/footer";
 
@@ -309,22 +305,29 @@ article .card{
 		max-width: 1023px;
 		
 	}
-
 	.btn{
 		margin-left: auto;
 		margin-right: auto;
-}
+	}
 	.process__step{
 		margin-left: auto;
 		margin-right: auto;
-}
-.loader{
-	height: 100px;
-	font-size: 30px;
-	p{
-		font-size: 30px;
 	}
-}
+	.loader{
+		height: 100px;
+		font-size: 30px;
+		p{
+			font-size: 30px;
+		}
+	}
+	.restaurants__cards {
+		.card__badge--nouveau {
+			&::before{
+				margin-top: 15px;
+				margin-left: 40rem;
+			}	
+		}
+	}
 }
 
 @media screen and (min-width: 1024px) and (max-width:1440px){
@@ -378,6 +381,14 @@ article .card{
 		font-size: 50px;
 		p{
 			font-size: 50px;
+		}
+	}
+	.restaurants__cards {
+		.card__badge--nouveau {
+			&::before{
+				margin-top: 15px;
+				margin-left: 16rem;
+			}	
 		}
 	}
 }

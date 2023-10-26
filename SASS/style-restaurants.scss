@@ -42,7 +42,7 @@ header {
 
 .menu_title--name {
 	font-family: $font__family--Shrikhand;
-	font-size: 28;
+	font-size: 28px;
 	font-style: italic;
 	margin-left: 0%;
 }
@@ -224,11 +224,7 @@ header {
 		margin-right: 10%;
 		top: 245px;
 	}
-	.menu__contain--entree{
-		h2{
-			padding-left: 15px;
-		}
-	}
+	
 	.menu__title{
 		.restaurant__favorite{
 			position: relative;
