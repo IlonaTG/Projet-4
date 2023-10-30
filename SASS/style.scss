@@ -331,10 +331,9 @@ article .card{
 	}
 }
 
-@media screen and (min-width: 1024px) and (max-width:1440px){
+@media screen and (min-width: 1024px){
 	.main-container {
-		max-width: 1440px;
-		
+		max-width: 100%;
 	}
 	.section__bg-color{
 		.btn{
